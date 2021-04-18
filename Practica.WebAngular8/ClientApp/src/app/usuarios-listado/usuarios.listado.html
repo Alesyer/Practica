@@ -1,0 +1,25 @@
+
+<h1 id="tableLabel">Listado usuarios</h1>
+
+
+<p *ngIf="!usuarios"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="usuarios">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Edad</th>
+      <th>Email</th>
+      <th>Contraseña</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let usuario of usuarios">
+      <td>{{ usuario.nombre }}</td>
+      <td>{{ usuario.edad }}</td>
+      <td>{{ usuario.email }}</td>
+      <td>{{ usuario.password }}</td>
+    </tr>
+  </tbody>
+</table>
+
